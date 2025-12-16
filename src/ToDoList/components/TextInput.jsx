@@ -8,6 +8,11 @@ export function TextInput() {
                 placeholder="Add a new task…"
                 className="ToDoList-InputTextBox"
             />
+
+            <button 
+                type="submit" 
+                className="ToDoList-SubmitButton"
+            >Add</button>
         </div>
     )
 }

@@ -11,3 +11,16 @@
     border-radius: 8px;
     font-size: 14px;
 }
+
+.ToDoList-InputTextBox:focus {
+    outline: none;
+    border-color: rgb(31, 117, 43);
+}
+
+.ToDoList-SubmitButton {
+    margin-left: 12px;
+    padding: 14px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
