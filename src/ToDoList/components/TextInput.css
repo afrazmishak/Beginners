@@ -1,12 +1,14 @@
 .TextInputContainer {
     display: flex;
     justify-content: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .ToDoList-InputTextBox {
-    justify-content: center;
     padding: 14px 10px;
-    width: 45%;
+    width: 100%;
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 14px;
@@ -14,7 +16,6 @@
 
 .ToDoList-InputTextBox:focus {
     outline: none;
-    border-color: rgb(31, 117, 43);
 }
 
 .ToDoList-SubmitButton {
@@ -23,4 +24,9 @@
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 14px;
+    cursor: pointer;
+}
+
+.ToDoList-SubmitButton:hover {
+    background-color: #d0d0d0;
 }

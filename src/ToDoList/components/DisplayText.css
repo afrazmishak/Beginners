@@ -1,0 +1,21 @@
+.DisplayTextContainer {
+    display: flex;
+    width: 60%;
+    background-color: aqua;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.DisplayTextList {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.DisplayTextLine {
+    position: relative;
+    font-size: 18px;
+    padding: 15px 0;
+    left: -15px;
+}
