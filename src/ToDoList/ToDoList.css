@@ -1,0 +1,44 @@
+/* 🌞 Light mode (default) */
+body {
+    background-color: #f5f5f5;
+    color: #222;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* 🌙 Dark mode */
+body.dark {
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+}
+
+/* Components inherit automatically */
+body.dark .ToDoListContainer {
+    background-color: #1e1e1e;
+    color: #1e1e1e;
+}
+
+body.dark .ToDoList-InputTextBox {
+    background-color: #1e1e1e;
+    color: #fff;
+    border-color: #444;
+}
+
+body.dark .ToDoList-SubmitButton,
+body.dark .DeleteButton {
+    background-color: #2a2a2a;
+    color: #fff;
+    border-color: #444;
+}
+
+body.dark .ToDoList-SubmitButton:hover {
+    background-color: #4caf50;
+}
+
+body.dark .ToDoList-SubmitButton:disabled {
+    background-color: #555;
+    color: #ccc;
+}
+
+body.dark .DeleteButton:hover {
+    background-color: #e53935;
+}

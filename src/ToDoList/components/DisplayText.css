@@ -27,7 +27,7 @@
 }
 
 .DeleteButton:hover {
-    background-color: red;
+    background-color: #e53935;
     color: white;
 }
 

@@ -28,7 +28,7 @@
 }
 
 .ToDoList-SubmitButton:hover {
-    background-color: green;
+    background-color: #4caf50;
     color: white;
 }
 
