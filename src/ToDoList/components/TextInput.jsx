@@ -26,6 +26,7 @@ export function TextInput({ setTasks }) {
                 className="ToDoList-InputTextBox"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
+                onKeyDown={(e) => e.key === 'Enter' && handleSubmit()}
             />
 
             <button 

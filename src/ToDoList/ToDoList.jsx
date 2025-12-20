@@ -24,17 +24,23 @@ export function ToDoList() {
         localStorage.setItem(THEME_KEY, darkMode ? 'dark' : 'light')
         document.body.classList.toggle('dark', darkMode)
     }, [darkMode]);
-    
+
     return (
-        <>
-            <TextInput setTasks={setTasks} />
-            <DisplayText tasks={tasks} setTasks={setTasks} />
+        <div className="ToDoLayout">
+            <div className="FixedInput">
+                <TextInput setTasks={setTasks} />
+            </div>
+
+            <div className="ScrollableList">
+                <DisplayText tasks={tasks} setTasks={setTasks} />
+            </div>
+
             <button
                 className="DarkModeToggle"
                 onClick={() => setDarkMode(prev => !prev)}
             >
                 {darkMode ? '☀️' : '🌙'}
             </button>
-        </>
+        </div>
     )
 }
