@@ -11,7 +11,9 @@
 
 .Text {
     display: flex;
-    gap: 1px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
     font-size: 16px;
     flex-grow: 1;
     padding: 14px 10px;
@@ -20,8 +22,31 @@
     cursor: pointer;
     background: inherit;
     backdrop-filter: blur(5px);
-    text-align: center;
+    text-align: left;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
+.EyeIcon {
+    cursor: pointer;
+    opacity: 0.7;
+    font-size: 16px;
+}
+
+.EyeIcon:hover {
+    opacity: 1;
+}
+
+.TaskText {
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
 
 .DeleteButton {
     margin-left: 12px;
@@ -52,6 +77,7 @@
     user-select: none;
     opacity: 0.6;
     font-size: 14px;
+    align-content: center;
 }
 
 .DragHandle:hover {
@@ -60,4 +86,17 @@
 
 .DragHandle:active {
     cursor: grabbing;
+}
+
+.EyeIcon {
+    margin-left: auto;      /* Push it to the right end of the Text span */
+    cursor: pointer;
+    opacity: 0.7;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.EyeIcon:hover {
+    opacity: 1;
 }

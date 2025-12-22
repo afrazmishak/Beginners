@@ -21,8 +21,6 @@ function SortableItem({ task, toggleComplete, handleDelete }) {
             style={style}
             className="ToDoListContainer"
         >
-
-
             <span
                 className={`Text ${task.completed ? 'Completed' : ''}`}
                 onClick={() => toggleComplete(task.id)}
@@ -31,7 +29,17 @@ function SortableItem({ task, toggleComplete, handleDelete }) {
                     ☰
                 </span>
 
-                {task.text}
+                <span className="TaskText">{task.text}</span>
+
+                <span 
+                    className="EyeIcon"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        alert(`Viewing task: ${task.text}`)
+                    }}    
+                >
+                    👁️
+                </span>
             </span>
 
             {!task.completed && (

@@ -123,5 +123,5 @@ body.dark .FixedInput {
     flex-grow: 1;
     overflow-y: auto;
     scrollbar-width: none;
-    max-height: 65vh;
+    max-height: 70vh;
 }
