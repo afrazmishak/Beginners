@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import './ToDoList.css'
 import { TextInput } from "./components/TextInput"
 import { DisplayText } from "./components/DisplayText"
+import { Footer } from "./components/Footer"
 
 const STORAGE_KEY = 'todo_tasks'
 const THEME_KEY = 'todo_theme'
@@ -33,6 +34,10 @@ export function ToDoList() {
 
             <div className="ScrollableList">
                 <DisplayText tasks={tasks} setTasks={setTasks} />
+            </div>
+
+            <div>
+                <Footer />
             </div>
 
             <button
