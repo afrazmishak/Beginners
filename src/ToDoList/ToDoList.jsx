@@ -27,25 +27,29 @@ export function ToDoList() {
     }, [darkMode]);
 
     return (
-        <div className="ToDoLayout">
-            <div className="FixedInput">
-                <TextInput setTasks={setTasks} />
-            </div>
+        <>
+            <title>Tamer | To-Do List</title>
+            <div className="ToDoLayout">
+                <div className="FixedInput">
+                    <TextInput setTasks={setTasks} />
+                </div>
 
-            <div className="ScrollableList">
-                <DisplayText tasks={tasks} setTasks={setTasks} />
-            </div>
+                <div className="ScrollableList">
+                    <DisplayText tasks={tasks} setTasks={setTasks} />
+                </div>
 
-            <div>
-                <Footer />
-            </div>
+                <div>
+                    <Footer />
+                </div>
 
-            <button
-                className="DarkModeToggle"
-                onClick={() => setDarkMode(prev => !prev)}
-            >
-                {darkMode ? '☀️' : '🌙'}
-            </button>
-        </div>
+                <button
+                    className="DarkModeToggle"
+                    onClick={() => setDarkMode(prev => !prev)}
+                >
+                    {darkMode ? '☀️' : '🌙'}
+                </button>
+            </div>
+        </>
+
     )
 }

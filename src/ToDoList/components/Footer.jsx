@@ -5,7 +5,7 @@ export function Footer() {
 
     return (
         <footer className="Footer">
-            © {year} Designed & Developed by Af
+            © {year} Designed & Developed by Afraz
         </footer>
     )
 }
