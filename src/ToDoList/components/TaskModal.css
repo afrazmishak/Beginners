@@ -42,8 +42,16 @@
     cursor: pointer;
 }
 
-.ModalButton:hover {
-    background-color: #ccc;
+.EditModalButton {
+    margin-right: 8px;
+}
+
+.EditModalButton:hover {
+    background-color: green;
+}
+
+.CloseModalButton:hover {
+    background-color: red;
 }
 
 body.dark .ModalContent {

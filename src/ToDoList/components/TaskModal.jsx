@@ -13,7 +13,9 @@ export default function TaskModal({ task, onClose }) {
 
                 <p className="ModalStatus"><strong>Status:</strong> {task.completed ? 'Completed' : 'Active'}</p>
 
-                <button className="ModalButton" onClick={onClose}>Close</button>
+                <button className="ModalButton EditModalButton">Edit</button>
+
+                <button className="ModalButton CloseModalButton" onClick={onClose}>Close</button>
             </div>
         </div>
     )
