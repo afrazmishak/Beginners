@@ -1,0 +1,17 @@
+.TaskContainer {
+    margin: 15px;    
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.TaskComponents {
+    margin: 5px;
+}
+
+.TaskDescription {
+    resize: vertical;
+    overflow: auto;
+    min-height: 80px;
+    max-height: 300px;
+}

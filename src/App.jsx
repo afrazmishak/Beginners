@@ -1,6 +1,7 @@
 import {Routes, Route, Navigate } from 'react-router-dom'
 import ToDoList from './ToDoList/ToDoList'
 import Home from './Home/Home'
+import TaskManager from './TaskManager/TaskManager'
 import './App.css'
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       
       <Route path="/home" element={<Home />} />
       <Route path="/todo-list" element={<ToDoList />} />
+      <Route path='/task-manager' element={<TaskManager />} />
     </Routes>
   )
 }
