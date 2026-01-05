@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import '../components/TaskForm.css'
 
-export default function TaskForm () {
+export default function TaskForm ({ onTaskAdded }) {
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')
 
@@ -13,14 +13,13 @@ export default function TaskForm () {
                 headers: {
                     'Content-Type' : 'application/json'
                 },
-                body: JSON.stringify({
-                    title,
-                    description
-                })
+                body: JSON.stringify({ title, description })
             })
 
             setTitle('')
             setDescription('')
+
+            onTaskAdded()
     }
 
     return (
