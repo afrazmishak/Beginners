@@ -18,7 +18,7 @@ export default function TaskManager () {
     return (
         <>
             <TaskForm onTaskAdded={fetchTasks} />
-            <TaskList  tasks={tasks}/>
+            <TaskList  tasks={tasks} onTaskUpdated={fetchTasks} />
         </>
     )
 }

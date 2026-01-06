@@ -33,10 +33,26 @@ app.post('/tasks', (req, res) => {
     res.status(201).json(newTask)
 })
 
-app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`)
+app.put('/tasks/:id', (req, res) => {
+  const taskId = Number(req.params.id)
+  const { title, description } = req.body
+
+  const taskIndex = tasks.findIndex(task => task.id === taskId)
+
+  if (taskIndex === -1) {
+    return res.status(404).json({ error: 'Task not found' })
+  }
+
+  tasks[taskIndex] = {
+    ...tasks[taskIndex],
+    title: title ?? tasks[taskIndex].title,
+    description: description ?? tasks[taskIndex].description
+  }
+
+  res.json(tasks[taskIndex])
 })
 
 
-
-
+app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`)
+})
