@@ -25,6 +25,14 @@ export function TaskList({ tasks, onTaskUpdated }) {
         onTaskUpdated()
     }
 
+    const deleteTask = async id => {
+        await fetch(`http://localhost:5000/tasks/${id}`, {
+            method: 'DELETE'
+        })
+
+        onTaskUpdated()
+    }
+
     return (
         <div>
             {tasks.map(task => (
@@ -49,6 +57,7 @@ export function TaskList({ tasks, onTaskUpdated }) {
                             <h3>{task.title}</h3>
                             <p>{task.description}</p>
                             <button onClick={() => startEdit(task)}>Edit</button>
+                            <button onClick={() => deleteTask(task.id)}>Delete</button>
                         </>
                     )}
                 </div>

@@ -52,6 +52,17 @@ app.put('/tasks/:id', (req, res) => {
   res.json(tasks[taskIndex])
 })
 
+app.delete('/tasks/:id', (req, res) => {
+  const taskId = Number(req.params.id)
+  const initialLength = tasks.length
+  tasks = tasks.filter(task => task.id !== taskId)
+
+  if (tasks.length === initialLength) {
+    return res.status(404).json({ error: 'Task not found' })
+  }
+
+  res.status(204).send()
+})
 
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`)

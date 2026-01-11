@@ -7,7 +7,7 @@ import './App.css'
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Navigate to="/todo-list" replace />} />
+      <Route path="/" element={<Navigate to="/task-manager" replace />} />
       
       <Route path="/home" element={<Home />} />
       <Route path="/todo-list" element={<ToDoList />} />
